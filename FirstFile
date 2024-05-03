@@ -1,0 +1,18 @@
+import random
+
+def generate_random_code(length=10, chars="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"):
+  """
+  Génère un code aléatoire de la longueur spécifiée en utilisant les caractères fournis.
+
+  Args:
+      length (int): La longueur du code à générer (par défaut 10).
+      chars (str): La chaîne de caractères à utiliser pour la génération du code (par défaut, tous les caractères alphanumériques).
+
+  Returns:
+      str: Le code aléatoire généré.
+  """
+  return "".join(random.choice(chars) for _ in range(length))
+
+if __name__ == "__main__":
+  code = generate_random_code()
+  print(f"Code aléatoire: {code}")
